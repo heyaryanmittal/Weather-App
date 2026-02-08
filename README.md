@@ -78,7 +78,4 @@ To deploy this project to Netlify:
 
 This project is licensed under the MIT License.
 
----
-Built with ❤️ by [Your Name]
-
 <!-- update 1 -->
