@@ -17,7 +17,7 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <div className="search-container" style={{ display: 'flex', gap: '10px', width: '100%', marginBottom: '0.5rem' }}>
+        <div className="search-container" style={{ display: 'flex', gap: '8px', width: '100%', marginBottom: '0.5rem' }}>
             <input
                 type="text"
                 className="glass-input"

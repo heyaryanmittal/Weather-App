@@ -35,27 +35,28 @@ const WeatherCard = ({ data }) => {
     const country = sys.country;
 
     return (
-        <div className="glass-panel animate-fade-in" style={{ textAlign: 'center', color: '#fff', padding: '1.5rem' }}>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>{name}, {country}</h2>
+        <div className="glass-panel animate-fade-in" style={{ textAlign: 'center', color: '#fff', padding: '1.5rem', width: '100%', overflow: 'hidden' }}>
+            <h2 style={{ fontSize: 'clamp(1.2rem, 5vw, 1.5rem)', marginBottom: '0.25rem', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{name}, {country}</h2>
             <p style={{ fontSize: '1rem', textTransform: 'capitalize', opacity: 0.9, marginBottom: '1rem' }}>
                 {description}
             </p>
 
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', flexWrap: 'wrap' }}>
                 {getWeatherIcon(weatherId, 80)}
             </div>
 
-            <div style={{ fontSize: '3.5rem', fontWeight: 'bold', marginBottom: '0.5rem', lineHeight: 1 }}>
+            <div style={{ fontSize: 'clamp(2.5rem, 10vw, 3.5rem)', fontWeight: 'bold', marginBottom: '0.5rem', lineHeight: 1 }}>
                 {temp}°
             </div>
             <p style={{ opacity: 0.8, marginBottom: '1.5rem' }}>Feels like {feelsLike}°</p>
 
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '0.5rem',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))',
+                gap: '0.75rem',
                 borderTop: '1px solid rgba(255,255,255,0.2)',
-                paddingTop: '1rem'
+                paddingTop: '1rem',
+                width: '100%'
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
                     <Droplets size={24} />

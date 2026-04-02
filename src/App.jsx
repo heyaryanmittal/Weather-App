@@ -44,11 +44,10 @@ function App() {
       width: '100%',
       maxWidth: '500px',
       margin: '0 auto',
-      padding: '1rem',
+      padding: '0.5rem 0',
       display: 'flex',
       flexDirection: 'column',
       gap: '1rem',
-      maxHeight: '100vh',
       justifyContent: 'center'
     }}>
       <h1 style={{
